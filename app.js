@@ -4,7 +4,7 @@ const server = express();
 const chalk = require('chalk');
 const path = require('path');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 2222;
 
 server.use(express.static(path.join(__dirname, '/public/')));
 server.use('/css', express.static(path.join(__dirname, '\node_modules\bootstrap\dist\css')));
@@ -47,5 +47,5 @@ server.get('/about', (req, res) => {
 });*/
 
 server.listen(port, () => {
-  console.log(`Hey... ${chalk.blue('Hello akshay gudhate... Express Server is running ')} @ ${chalk.red('localhost:8888')}`);
+  console.log(`Hey... ${chalk.blue('Hello akki... Express Server is running ')} @ ${chalk.red('localhost:8888')}`);
 });
